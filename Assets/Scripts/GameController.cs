@@ -1,13 +1,20 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;  
+using UnityEngine.UI;  
 
 public class GameController : MonoBehaviour
 {
     
-    public void RestartGame()
+    public void StartGame()
     {
         
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("GameScene"); 
     }
 
+    
+    public void ReplayGame()
+    {
+       
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+    }
 }

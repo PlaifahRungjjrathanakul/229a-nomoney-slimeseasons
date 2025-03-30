@@ -5,8 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Slime
-  - fence
-  - Fence
+  - DamageObject
   layers:
   - Default
   - TransparentFX
