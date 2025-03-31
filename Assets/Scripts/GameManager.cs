@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro;  
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
     private float timer = 0f;  
     private int score = 0;     
 
-    public float gameDuration = 30f;  
-    public int targetScore = 20;     
+    public float gameDuration = 60f;  
+    public int targetScore = 30;      
 
     void Start()
     {
@@ -24,9 +24,10 @@ public class GameManager : MonoBehaviour
         timer += Time.deltaTime;
         timeText.text = "Time: " + Mathf.Floor(timer);
 
-       
+        
         if (score < targetScore && timer < gameDuration)
         {
+            
             score++;
             scoreText.text = "Score: " + score;
         }
@@ -43,13 +44,12 @@ public class GameManager : MonoBehaviour
     {
         
         Debug.Log("Game Over! Time's up or Score reached!");
+        scoreText.text = "Final Score: " + score;
+        timeText.text = "Time: " + Mathf.Floor(timer);
 
         
         score = 0;
         timer = 0f;
-        scoreText.text = "Score: " + score;
-        timeText.text = "Time: " + Mathf.Floor(timer);
-
         
     }
 }
